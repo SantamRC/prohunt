@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
 function App() {
+
+  const [results, setResults] = useState(null);
+  const [search, setSearch] = useState(null);
+
+  const options = {
+    method: 'POST',
+    headers: {
+      accept: 'application/json',
+      'content-type': 'application/json',
+      'x-api-key': 'df6fc6cd-b2ca-4437-bc66-da2057ccdde0'
+    },
+    body: JSON.stringify({ query: search })
+  };
+
+  const findJobs = () => {
+    fetch('https://api.metaphor.systems/search', options)
+      .then(response => response.json())
+      .then(response => { console.log(response); setResults(response) })
+      .catch(err => console.error(err));
+  }
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input type="text" onChange={e => setSearch(e.target.value)} />
+      <button onClick={findJobs}>Find</button>
+      {JSON.stringify(results)}
     </div>
   );
 }
