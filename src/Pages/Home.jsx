@@ -11,6 +11,9 @@ import LinkIcon from '@mui/icons-material/Link';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { setUser } from '../Redux/actions';
+
 import data from '../data.json'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -35,6 +38,11 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 
 export default function CustomizedTables() {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+
+  console.log(user)
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
