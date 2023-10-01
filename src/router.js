@@ -3,9 +3,12 @@ import Home from "./Pages/Home"
 import Recommendations from "./Pages/Recommendations"
 import Search from "./Pages/Search"
 
+import Navbar from "./Components/Navbar"
+
 function Router() {
     return (
         <div className="router">
+            <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="Recommendations" element={<Recommendations />} />

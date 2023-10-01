@@ -1,0 +1,84 @@
+{
+    "results": [
+        {
+            "title": "Job adverts",
+            "url": "https://www.software.ac.uk/tags/job-adverts",
+            "publishedDate": "2021-08-11",
+            "author": null,
+            "id": "L3l-Grelv11jO1DHQ_sOxA",
+            "score": 0.1482504904270172
+        },
+        {
+            "title": "Free & Open Source Jobs",
+            "url": "https://www.fossjobs.net/",
+            "publishedDate": "2023-01-27",
+            "author": null,
+            "id": "e8I3k1uZ_uBlxhy2gkdk2g",
+            "score": 0.13636434078216553
+        },
+        {
+            "title": "OCaml Jobs",
+            "url": "https://ocaml.org/jobs",
+            "publishedDate": "2020-09-22",
+            "author": null,
+            "id": "I_rdPj2TVWoU6W8uVjcd_g",
+            "score": 0.1319269984960556
+        },
+        {
+            "title": "We Work Remotely: Remote jobs in design, programming, marketing and more",
+            "url": "https://weworkremotely.com/",
+            "publishedDate": "2023-02-07",
+            "author": null,
+            "id": "r_Am37dtI-4ksVWxJ_DXRA",
+            "score": 0.12703077495098114
+        },
+        {
+            "title": "Computing Jobs - ACM Career & Job Center",
+            "url": "https://jobs.acm.org/",
+            "publishedDate": "2023-01-01",
+            "author": "Amanda Augustine",
+            "id": "RM0WEtulckyshbHLeOirqA",
+            "score": 0.12696130573749542
+        },
+        {
+            "title": "Ask HN: Who is hiring? (March 2023)",
+            "url": "https://news.ycombinator.com/item?id=34983767",
+            "publishedDate": "2023-03-01",
+            "author": null,
+            "id": "8RVF9F128ZJ-rgvp0FpMrw",
+            "score": 0.12462358176708221
+        },
+        {
+            "title": "Technology and Software jobs",
+            "url": "https://jobs.washingtonpost.com/jobs/technology-and-software/",
+            "publishedDate": "2014-01-01",
+            "author": null,
+            "id": "TjwxYDLw7bb96mOABWS6TA",
+            "score": 0.12427552044391632
+        },
+        {
+            "title": "Current jobs",
+            "url": "https://www.semanticsoftware.info/jobs",
+            "publishedDate": "2023-02-06",
+            "author": null,
+            "id": "veHDjMbGhKFeYP-NqufprA",
+            "score": 0.12418939173221588
+        },
+        {
+            "title": "Find Startup Jobs Near You and Remote Jobs",
+            "url": "https://angel.co/jobs",
+            "publishedDate": "2023-01-01",
+            "author": null,
+            "id": "tpUMMocYL85_CK8vfcWsww",
+            "score": 0.12366990000009537
+        },
+        {
+            "title": "Search",
+            "url": "https://www.jobs.ac.uk/search/?academicDisciplineFacet[0]=biological-sciences&subDisciplineFacet[0]=biology&academicDisciplineFacet[1]=computer-sciences&subDisciplineFacet[1]=computer-science&subDisciplineFacet[2]=software-engineering&academicDisciplineFacet[2]=engineering-and-technology&subDisciplineFacet[3]=biotechnology&expired-job-redirect=true",
+            "publishedDate": "1998-01-01",
+            "author": null,
+            "id": "Y0xnRMqbAuU8GzRxSJdqxQ",
+            "score": 0.12300543487071991
+        }
+    ]
+}
