@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-const userReducer = (state = "Santam", action) => {
+const userReducer = (state = null, action) => {
     switch (action.type) {
         case 'SET_USER':
             return action.payload;
@@ -13,7 +13,7 @@ const userReducer = (state = "Santam", action) => {
 const stringsReducer = (state = [], action) => {
     switch (action.type) {
         case 'SET_STRINGS':
-            return action.payload;
+            return [...state, ...action.payload];
         default:
             return state;
     }
