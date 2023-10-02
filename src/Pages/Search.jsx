@@ -38,7 +38,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function Search() {
   const [searchString, setSearchString] = useState(null);
-  const dispatch = useDispatch();
+  const searchItems = useSelector((state) => state.search);
 
   return (
     <div>
@@ -46,38 +46,42 @@ export default function Search() {
         searchString={searchString}
         setSearchString={setSearchString}
       />
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 700 }} aria-label="customized table">
-          <TableHead>
-            <TableRow>
-              <StyledTableCell>Job Title</StyledTableCell>
-              <StyledTableCell align="right">Data Published</StyledTableCell>
-              <StyledTableCell align="right">URL</StyledTableCell>
-              <StyledTableCell align="right">Like</StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {data.results.map((item) => (
-              <StyledTableRow key={item.id}>
-                <StyledTableCell component="th" scope="row">
-                  {item.title}
-                </StyledTableCell>
-                <StyledTableCell align="right">
-                  {item.publishedDate}
-                </StyledTableCell>
-                <StyledTableCell align="right">
-                  <a href={item.url} target="_blank" rel="noreferrer">
-                    <LinkIcon />
-                  </a>
-                </StyledTableCell>
-                <StyledTableCell align="right">
-                  <FavoriteBorderIcon />
-                </StyledTableCell>
-              </StyledTableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      {searchItems.length > 0 ? (
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 700 }} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Job Title</StyledTableCell>
+                <StyledTableCell align="right">Data Published</StyledTableCell>
+                <StyledTableCell align="right">URL</StyledTableCell>
+                <StyledTableCell align="right">Like</StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {searchItems.map((item) => (
+                <StyledTableRow key={item.id}>
+                  <StyledTableCell component="th" scope="row">
+                    {item.title}
+                  </StyledTableCell>
+                  <StyledTableCell align="right">
+                    {item.publishedDate}
+                  </StyledTableCell>
+                  <StyledTableCell align="right">
+                    <a href={item.url} target="_blank" rel="noreferrer">
+                      <LinkIcon />
+                    </a>
+                  </StyledTableCell>
+                  <StyledTableCell align="right">
+                    <FavoriteBorderIcon />
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      ) : (
+        <div>Search for Something</div>
+      )}
     </div>
   );
 }

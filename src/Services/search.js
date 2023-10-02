@@ -18,7 +18,7 @@ const Search = (query) => {
 
         fetch("https://api.metaphor.systems/search", requestOptions)
             .then(response => response.text())
-            .then(result => resolve(result))
+            .then(result => resolve(JSON.parse(result)))
             .catch(error => reject('error', error));
     })
 }

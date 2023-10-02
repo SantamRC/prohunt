@@ -19,9 +19,19 @@ const stringsReducer = (state = [], action) => {
     }
 };
 
+const searchReducer = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_SEARCH':
+            return action.payload;
+        default:
+            return state;
+    }
+};
+
 const rootReducer = combineReducers({
     user: userReducer,
     strings: stringsReducer,
+    search: searchReducer
 });
 
 export default rootReducer;
